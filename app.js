@@ -76,11 +76,12 @@ app.post('/onboarding', async (req, res) => {
             res.status(400).send('Missing required fields: firstName, lastName, email');
             return;
         }                        
-        const uniqueFileName = `${email}.json`;        
-        const fileContent = JSON.stringify(req.body, null, 2);
+        const uniqueFileName = `${email}.json`;     
+        req.body["createdAt"] = timeStamp.toISOString(); 
+        const fileContent = JSON.stringify(req.body, null, 2);        
         const bucketName = 'maggiedelpilar';
         const bucketPath = 'ingest';        
-        if (await s3Client.fileExistsInS3( `${bucketPath}/${uniqueFileName}`, bucketName)) {
+        if (false) {
             logger.warn(`File already exists in S3: ${uniqueFileName}`);
             res.status(409).send('Onboarding data already exists for this email.');
             return;
