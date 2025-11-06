@@ -1,10 +1,13 @@
 import { S3Client, ListBucketsCommand, ListObjectsV2Command, PutObjectCommand, HeadObjectCommand } from '@aws-sdk/client-s3';
 
-const s3Client = new S3Client({  region: 'us-east-1', // Replace with your desired region  
-    credentials: {
-    accessKeyId: "AKIASDLRCZGZBIKAAZGU", // Use environment variables for security
-    secretAccessKey: "L54eA2OEbuGl9NxEX/iHCyup4EJNQ0eZZI6TyeLJ"
-  } });  
+
+
+ 
+ const s3Client = new S3Client({  region: 'us-east-1',
+       credentials: {
+     accessKeyId: '', 
+     secretAccessKey: ''
+   } }); 
 
 async function listMyBuckets() {
   try {

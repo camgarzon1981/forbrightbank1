@@ -1,0 +1,2 @@
+2025-11-05 22:43:22 info: Received onboarding request for: 93a043f6-d505-42a4-86e7-6ade2e83f8e3
+2025-11-05 22:43:22 error: Error fetching bucket contents: traceId - 93a043f6-d505-42a4-86e7-6ade2e83f8e3, error - Error: Resolved credential object is not valid
