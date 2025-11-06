@@ -1,0 +1,1 @@
+select * from clients order by createdAt desc limit 10;

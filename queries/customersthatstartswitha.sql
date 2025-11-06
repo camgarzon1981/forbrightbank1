@@ -1,0 +1,1 @@
+select * from clients where upper(firstName) like 'A%'
